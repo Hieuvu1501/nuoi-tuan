@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuôi Tôi - Minh Bạch 100% (Thật Đấy!)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #2196F3;
+            --text-color: #333;
+            --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f0f2f5;
+        }
+
+        /* Container chính */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header Styles */
+        header {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .logo {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: #666;
+        }
+
+        /* --- PHẦN BẠN CẦN: Expense Section (Dựa trên ảnh của bạn) --- */
+        .expense-section {
+            background: var(--bg-gradient); /* Màu nền gradient như trong code cũ của bạn */
+            border-radius: 20px;
+            padding: 25px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 15px;
+            border-radius: 15px;
+        }
+
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #e91e63;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+
+        /* Comparison Section */
+        .comparison-section {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .bad-side { color: #d32f2f; }
+        .good-side { color: #388e3c; }
+
+        ul.check-list {
+            list-style: none;
+        }
+        
+        ul.check-list li {
+            margin-bottom: 10px;
+        }
+
+        /* Donation Section */
+        .donate-section {
+            text-align: center;
+            background: #fff3e0;
+            padding: 40px;
+            border-radius: 20px;
+            border: 2px dashed #ff9800;
+        }
+
+        .btn-donate {
+            display: inline-block;
+            background: #ff9800;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            transition: background 0.3s;
+        }
+
+        .btn-donate:hover {
+            background: #f57c00;
+        }
+
+        /* Chart/Progress Bars */
+        .spending-bar {
+            margin-bottom: 15px;
+        }
+        .progress-bg {
+            background: #e0e0e0;
+            border-radius: 10px;
+            height: 20px;
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            background: var(--primary-color);
+            text-align: right;
+            padding-right: 10px;
+            color: white;
+            font-size: 0.8rem;
+            line-height: 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+            .logo { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo">🌱 NUÔI TÔI 🌱</div>
+            <h1>HÃY NUÔI TÔI.</h1>
+            <p class="tagline">Tôi hứa sao kê đầy đủ! 💯</p>
+        </header>
+
+        <section class="expense-section">
+            <h2>💰 Tình Hình Tài Chính Hiện Tại</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <p>Tổng Đã Nhận</p>
+                    <div class="stat-value">0 đ</div>
+                    <small>Từ 0 nhà hảo tâm</small>
+                </div>
+                <div class="stat-card">
+                    <p>Đã Chi Tiêu</p>
+                    <div class="stat-value" style="color: #d32f2f;">0 đ</div>
+                    <small>Chưa có vốn...</small>
+                </div>
+                <div class="stat-card">
+                    <p>Còn Lại</p>
+                    <div class="stat-value" style="color: #757575;">0 đ</div>
+                    <small>Cứu tôi với!</small>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 style="text-align: center; margin-bottom: 30px;">🎯 Tại Sao Nên Nuôi Tôi?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Sao Kê Realtime</h3>
+                    <p>Cập nhật từng giây! Còn nhanh hơn cả tốc độ người yêu cũ trở mặt.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-search-dollar"></i></div>
+                    <h3>Minh Bạch 300%</h3>
+                    <p>Hơn cả 100%! Tôi báo cáo cả việc mua ly trà sữa trân châu đường đen.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-hamburger"></i></div>
+                    <h3>Chi Tiêu Hợp Lý</h3>
+                    <p>Không mua xe hơi, nhà lầu. Chỉ ăn cơm với mì tôm (có trứng) thôi!</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="comparison-section">
+            <h2 style="text-align: center; margin-bottom: 30px;">💰 So Sánh Với "Người Khác"</h2>
+            <div class="comparison-grid">
+                <div class="bad-side">
+                    <h3>❌ Người Khác</h3>
+                    <ul class="check-list">
+                        <li><i class="fas fa-times"></i> Sao kê sau 3 năm (hoặc quên luôn)</li>
+                        <li><i class="fas fa-times"></i> File Excel mờ như ảnh ma</li>
+                        <li><i class="fas fa-times"></i> Block người hỏi sao kê</li>
+                    </ul>
+                </div>
+                <div class="good-side">
+                    <h3>✅ Nuôi Tôi</h3>
+                    <ul class="check-list">
+                        <li><i class="fas fa-check"></i> Sao kê trước khi tiêu</li>
+                        <li><i class="fas fa-check"></i> File Excel 4K Ultra HD</li>
+                        <li><i class="fas fa-check"></i> Trả lời inbox 24/7</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section style="margin-bottom: 40px;">
+            <h2 style="text-align: center; margin-bottom: 20px;">📈 Tôi Sẽ Dùng Tiền Vào Đâu?</h2>
+            <div class="spending-bar">
+                <p>Ăn uống (Cơm, mì tôm, KHÔNG tôm hùm)</p>
+                <div class="progress-bg"><div class="progress-fill" style="width: 40%;">40%</div></div>
+            </div>
+            <div class="spending-bar">
+                <p>Điện nước internet (Để online sao kê)</p>
+                <div class="progress-bg"><div class="progress-fill" style="width: 20%; background: #2196F3;">20%</div></div>
+            </div>
+            <div class="spending-bar">
+                <p>Mua giáo trình (sách, giáo trình Luật)</p>
+                <div class="progress-bg"><div class="progress-fill" style="width: 15%; background: #9C27B0;">15%</div></div>
+            </div>
+        </section>
+
+        <section class="donate-section">
+            <h2>💳 DONATE NGAY ĐI, NẾU BẠN ĐANG CƯỜI!</h2>
+            <p>Quét mã QR (tưởng tượng) hoặc bấm nút dưới đây</p>
+            <br>
+            <img 
+                src="https://img.vietqr.io/image/VCB-2828923999-compact2.png?amount=50000&addInfo=Nuoi%20Toi%20Donate&accountName=NGUYEN%20ANH%20TUAN" 
+                alt="Quét mã QR để nuôi tôi" 
+                style="width: 100%; max-width: 300px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);"
+            >
+            <br>
+            <a href="#" class="btn-donate" onclick="alert('Cảm ơn bạn đã quan tâm! Hãy quét mã QR để donate nhé! 🙏')">
+    🎁 TÔI MUỐN NUÔI BẠN!
+</a>
+        </section>
+
+        <footer style="text-align: center; margin-top: 50px; padding: 20px; color: #777; font-size: 0.9rem;">
+            <p>⚠️ DISCLAIMER: Đây là bản demo mã nguồn (re-code) mang tính chất học tập.</p>
+            <p>© 2025 Nuôi Tôi Fake. All rights reserved.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
